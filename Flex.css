@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/*Global styling*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* I'm creating a nav bar using flex properties*/
+.nav_grandpt{
+    background-color: rgb(20, 34, 70);
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.nav_parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+    margin: auto;
+    padding: 0.3rem 0rem;
+}
+.nav_parent ol{
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 26rem;
+    justify-content: space-between;
+}
+.nav_parent h2{
+    flex: 2 1 26rem; /* shortcut form for writing a flex code*/
+    color: white;
+    
+}
+.nav_parent li{
+    padding: 0.6rem 1rem 0.6rem 0.1rem;
+}
+.nav_parent span{
+    color: aqua;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.nav_parent i{
+    color: wheat;
+}
+.box{
+    background-color: aqua;
+    border-radius: 9px;
+}
+/* Creating a landing page(main page)*/ 
+.land_parent{
+   background-color: rgb(20, 34, 70);
+   color: white;
+}
+.land_child{
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin: auto;
+    padding-top: 4rem;
+    position: relative;
+    padding-right: 4rem;
+    padding-bottom: 6rem;
+}
+.land_child img{
+    height: 450px;
+    z-index: 2;
+    position: absolute;
+    left: 55%;
+}
+.land_text{
+    padding-top: 2rem;
+    width: 40%;
+}
+.land_text h1{
+    font-size: 55px;
+}
+.land_text p{
+    font-size: 12px;
+    padding: 0.8rem 0rem 1rem 0rem;
+}
+.land_text span{
+    color: aqua;
+}
+.land_text button{
+    font: 11px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: aqua;
+    color: wheat;
+    border-radius: 10px;
+}
+.circle{
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    border-radius: 100%;
+}
+/*Creating a footer*/
+.footer_p{
+background-color: rgb(20, 34, 70);
+color: white;
+box-shadow: -1px -1px rgba(255, 255, 255, 0.094);
+padding: 1.5rem 0rem;
+}
+.footer_child{
+    width: 86%;
+    margin: auto;
+    min-height: 40vh;
+
+}
+.footer_box1{
+    display: flex;
+    min-height: 30vh;
+    justify-content: space-between;
+}
+.half1 h2{
+    font-size: 40px;
+    span{
+        color: aqua;
+    }
+}
+.half1 p{
+    font-size: 12px;
+    padding: 1.5rem 0rem 2rem;
+    line-height: 15px;
+}
+.half1{
+    width: 45%;
+}
+.half2{
+    width: 200px;
+    li{
+        list-style: none;
+        padding: 0.4rem ;
+    }
+}
+.small_circle{
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 100%;
+}
+.line{
+    border: 0;
+    height: 1px;
+    background-color: white;
+    opacity: 0.3;
+}
+.footer_box2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+    p{
+        font-size: 12px;
+    }
+}
+.tnc{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    p{
+        text-decoration: underline;
+    }
+}
+/*Css design for smaller devices*/
+@media(max-width:1021px){
+    .land_child img{
+        left: 50%;
+        position: static;
+    }
+}
+@media(max-width:800px){
+    .land_child img{
+        left: 50%;
+        position: static;
+        width: 100%; 
+    }
+    .b1{
+        width: 100%;
+        padding: 2rem 4rem;
+    }
+    .land_child{
+        flex-wrap: wrap;
+        padding-right: 0rem;
+        
+    }
+    .land_text{
+        width: 100%;
+        padding: 0;
+        h2{
+            font-size: 60px;
+        }
+        button{
+            font-size: 16px;
+        }
+    }
+    .land_text p{
+        font-size: 14px;
+    }
+    .circle{
+        display: none;
+    }
+}
+@media (max-width:420px){
+    .nav_parent{
+        flex-wrap: wrap;
+        a{
+            font-size: 12px;
+        }
+    }
+    .land_text{
+       width: 100%;
+    }
+    .b1{
+        padding: 2rem 0.5rem;
+    }
+    .footer_box1{
+        flex-wrap: wrap;
+        .half1{
+            width: 100%;
+        }
+    }
+}
